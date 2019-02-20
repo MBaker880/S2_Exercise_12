@@ -29,3 +29,21 @@
       Writes the daily rows in the calendar table, highlighting calDate
 	
 */
+/* Set the date diplayed in the calendar */
+var thisDay = new Date("August 24, 2018");
+
+// Write te calendar to the element with the id "calendar"
+document.getElementById("calendar").innerHTML = createCalendar(thisDay);
+
+// Finctio to generate the calendar table
+function createCalendar(calDate) {
+      var calendarHTML = "<table id='calendar_table'>";
+      calendarHTML += "</table>";
+      return calendarHTML;
+}
+
+// Function to write the calendar caption
+function calCaption(calDate) {
+      //monthName array contains the list of month names
+      var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+}
