@@ -5,8 +5,8 @@
    Tutorial 10
    Tutorial Case
 
-   Author: 
-   Date:  
+   Author: Mackenzie Baker
+   Date:   2.19.2019
 
    Filename:   lht_calendar.js  
 
@@ -38,6 +38,7 @@ document.getElementById("calendar").innerHTML = createCalendar(thisDay);
 // Finctio to generate the calendar table
 function createCalendar(calDate) {
       var calendarHTML = "<table id='calendar_table'>";
+      calendarHTML += calCaption(calDate);
       calendarHTML += "</table>";
       return calendarHTML;
 }
@@ -46,4 +47,13 @@ function createCalendar(calDate) {
 function calCaption(calDate) {
       //monthName array contains the list of month names
       var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+      //Determine the current month
+      var thisMonth = calDate.getMonth();
+
+      //Determie the current year
+      var thisYear = calDate.getFullYear();
+
+      //Write the caption
+      return "<caption>" + monthName[thisMonth] + " " + thisYear + "</caption>";
 }
